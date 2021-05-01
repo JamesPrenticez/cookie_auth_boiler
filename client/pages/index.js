@@ -10,7 +10,7 @@
 const Index = () => {
     return (
         <>
-            <h1 className='jumbotron text-center bg-primary'>Hellow World</h1>
+            <h1 className='jumbotron text-center bg-primary square'>Hellow World</h1>
             <p>from next js..</p>
         </>
     )
