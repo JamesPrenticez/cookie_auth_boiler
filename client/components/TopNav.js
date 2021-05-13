@@ -1,6 +1,6 @@
 import {Menu} from 'antd'
 import Link from 'next/link'
-import {AppstoreOutlined, LoginOutlined, UserAddOutlined} from '@ant-design/icons'
+import {AppstoreOutlined, LoginOutlined, UserAddOutlined, YoutubeOutlined} from '@ant-design/icons'
 
 const {Item} = Menu //menu.item
 
@@ -20,6 +20,11 @@ const TopNav = () => {
                 <Item icon={<UserAddOutlined />}>
                     <Link href='/register'>
                         <a>Register</a>
+                    </Link>
+                </Item>
+                <Item icon={<YoutubeOutlined />}>
+                    <Link href='/courseone'>
+                        <a>Course One</a>
                     </Link>
                 </Item>
             </Menu>
