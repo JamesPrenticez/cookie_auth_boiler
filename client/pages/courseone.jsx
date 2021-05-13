@@ -16,10 +16,11 @@ class Courseone extends React.Component {
         src: '',
     }
   }
-
-  getInitialState = () => {
-    return { src: VIDEOS.deer};
-  }
+  componentDidMount() {
+      this.setState({
+        src: VIDEOS.deer
+      });
+    }
   
   chooseVideo = (newVideo) => {
     this.setState({
@@ -30,10 +31,12 @@ class Courseone extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='jumbotron text-center bg-primary square'>Vieeo Player</h1>
+        <h1 className='jumbotron text-center bg-primary square'>Video Player</h1>
         <p>Course One</p>
-        <VideoMenu chooseVideo={this.chooseVideo} />
-        <Video src={this.state.src} />
+        <div className='wrapper'>
+          <VideoMenu chooseVideo={this.chooseVideo} state={this.state}/>
+          <Video src={this.state.src} />
+        </div>
       </div>
     );
   }
